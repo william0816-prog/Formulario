@@ -1,0 +1,10 @@
+<form [formGroup]="formularioRegistro">
+Nombre: <input type="text" formControlName="nombre" placeholder="Nombre de Usuario" required> <br>
+<div class="error">Error el Campo es Obligatorio</div>
+Apellido: <input type="text" formControlName="apellido" placeholder="Apellido"><br>
+FechaNacimiento: <input type="date" formControlName="fechaNacimiento" placeholder="Fecha de Nacimiento"><br>
+Email: <input type="email" formControlName="email" placeholder="Ingrese su Email"><br>
+Pais: <input type="text" formControlName="pais" placeholder="Pais"> <br>
+Numero de Telefono: <input type="number" formControlName="numero" placeholder="Telefono"><br>
+<button [disabled]="!formularioRegistro.valid" type="button" (click)="guardar()">Guardar</button>
+</form> 
